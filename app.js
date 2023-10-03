@@ -12,7 +12,6 @@ const requestData = (q) => {
     .then( response => response.json() )
     .then( data => { renderData(data.items) } )
     .catch( error => console.log(error) );
-
 };
 
 function debounce(fn, delay) {
@@ -35,7 +34,6 @@ const renderData = (items) => {
     hints.push(hint);
     resultsArr.push(result);
   });
-  // prepare hints
   renderHints(hints);
 };
 
@@ -83,25 +81,21 @@ searchField.addEventListener('input', function() {
 });
 
 searchField.addEventListener('change', function() {
-  //console.log('change', this.value);
 });
 
 searchField.addEventListener('keyup', function(evt) {
   if (evt.keyCode === '13') {
-    //console.log('key ENTER');
   }
 });
 
 sForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
-  //console.log('submit');
 });
 
 resultsList.addEventListener('click', function(evt) {
   let hit = evt.target;
   if (hit.tagName === 'BUTTON') {
     const resultsItem = hit.closest('.results__item');
-    //resultsItem.classList.add('hidden');
     resultsItem.closest('.results').removeChild(resultsItem);
   }
 });
