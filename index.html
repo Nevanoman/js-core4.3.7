@@ -1,27 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>JS Core 4.3.7.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-</head>
-<body>
-  <section class="main">
-    <div class="wrap">
-      <form class="search-form" action="./" method="get">
-        <fieldset class="search-form__set">
-          <input type="search" class="search-form__field search" name="q" value="" tabindex="1" accesskey="q" placeholder="искать…" autocomplete="off" />
-          <ul class="search-form__hints hints"></ul>
-        </fieldset>
-      </form>
-      <nav class="found">
-        <ul class="found__list results"></ul>
-      </nav>
+  <head>
+    <meta charset="UTF-8"/>
+    <link href="style.css" rel="stylesheet">
+    <title>Java Mentor List Repositories</title>
+  </head>
+  <body>
+      <div class="dropdown">
+	  <input name="search" type="text" value=""/>
+	  <div class="dropdown-container">
+	  </div>
+      <div class="chosens"></div>
     </div>
-  </section>
-  <script type="text/javascript" src="app.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
