@@ -47,12 +47,12 @@ function addChosen(target) {
 
 async function getPredictions() {
     const urlSearchRepositories = new URL("https://api.github.com/search/repositories");
-    let repositoriesPart = inputSearch.value.trim();
-    if (repositoriesPart == "") {
+    let repositoriesPart = inputSearch.value;
+    if (repositoriesPart.trim() === "") {
 	removePredictions();
 	return;
-    } else {
-			
+    }
+
     urlSearchRepositories.searchParams.append("q", repositoriesPart)
     try {
 	let response = await fetch(urlSearchRepositories);
