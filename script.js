@@ -47,7 +47,7 @@ function addChosen(target) {
 
 async function getPredictions() {
     const urlSearchRepositories = new URL("https://api.github.com/search/repositories");
-    let repositoriesPart = inputSearch.value;
+    let repositoriesPart = inputSearch.value.trim();
     if (repositoriesPart == "") {
 	removePredictions();
 	return;
@@ -57,7 +57,7 @@ async function getPredictions() {
     try {
 	let response = await fetch(urlSearchRepositories);
 	if (response.ok) {
-	    let repositories = await response.trim.json();
+	    let repositories = await response.json();
 	    showPredictions(repositories);
 	}
 	else return null;
