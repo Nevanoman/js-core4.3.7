@@ -57,7 +57,7 @@ async function getPredictions() {
     try {
 	let response = await fetch(urlSearchRepositories);
 	if (response.ok) {
-	    let repositories = await response.json();
+	    let repositories = await response.trim.json();
 	    showPredictions(repositories);
 	}
 	else return null;
