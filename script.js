@@ -51,8 +51,8 @@ async function getPredictions() {
     if (repositoriesPart == "") {
 	removePredictions();
 	return;
-    }
-
+    } else {
+			
     urlSearchRepositories.searchParams.append("q", repositoriesPart)
     try {
 	let response = await fetch(urlSearchRepositories);
